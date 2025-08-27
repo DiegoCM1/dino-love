@@ -4,7 +4,6 @@ import Image from "next/image";
 import { AnimatedBeamMultipleOutputs } from "@/components/animated-beam-multiple-outputs";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import BlurIn from "@/components/magicui/blur-in";
-import { EmailForm } from "@/components/email-form";
 import { FadeIn } from "@/components/magicui/fade-in";
 import GlobeAndStars from "@/components/globe-and-stars";
 import Hero from "@/components/hero";
@@ -12,7 +11,6 @@ import Marquee from "@/components/magicui/marquee";
 import Technologies from "@/components/technologies";
 import ThemeToggle from "@/components/theme-toggle";
 import Orbit from "@/components/orbit";
-import RetroGrid from "@/components/magicui/retro-grid";
 import StatsChart from "@/components/stats-chart";
 import { cn } from "@/lib/utils";
 import { defaultDomains } from "@/lib/data";
@@ -85,7 +83,7 @@ const features = [
             href={
               process.env.NEXT_PUBLIC_AVAILABLE_FOR_FREELANCE == "true"
                 ? `${process.env.NEXT_PUBLIC_DISCORD}`
-                : "#contact-form"
+                : "#"
             }
             className="absolute top-2 right-2 bg-background rounded-lg px-4 py-2 text-xs text-neutral-500 dark:text-neutral-300 max-w-3/4 w-fit"
           >
@@ -301,43 +299,6 @@ const features = [
             <RippleCard />
           </div>
         </div>
-      </div>
-    ),
-  },
-
-  {
-    Icon: "",
-    name: "",
-    description: "",
-    className: "col-span-3 md:col-span-3",
-    href: "",
-    cta: "",
-    background: (
-      <div
-        id="contact-form"
-        className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_0%)]"
-      >
-        <div className="absolute inset-0 z-50 flex justify-center items-center gap-5 p-5">
-          <div className="max-w-sm w-full flex flex-col gap-2">
-            <div className="text-5xl md:text-6xl font-semibold text-neutral-700 dark:text-neutral-300 w-full flex justify-start">
-              <BlurIn duration={0.5} className="h-full">
-                Get in touch.
-              </BlurIn>
-            </div>
-            <div className="w-full flex justify-center text-neutral-500 dark:text-neutral-400">
-              Leave your email to get the conversation started. We&apos;ll be in
-              touch soon.
-            </div>
-            <div className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-              *Your email will never be shared with anyone.
-            </div>
-            <div className="">
-              <EmailForm />
-            </div>
-          </div>
-        </div>
-
-        <RetroGrid />
       </div>
     ),
   },
