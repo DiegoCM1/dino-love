@@ -4,7 +4,7 @@ import MeteorShower from "@/components/magicui/meteors";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/magicui/fade-in";
-import { Mail, Github } from "lucide-react";
+import { Play, Image } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
 
 export default function Hero() {
@@ -28,10 +28,10 @@ export default function Hero() {
                 <Button
                   variant="default"
                   size="lg"
-                  className="flex items-center gap-2 w-full group/Github"
+                  className="flex items-center gap-2 w-full group/Image"
                 >
-                  <div>GitHub</div>
-                  <Github className="h-5 w-5 lg:group-hover/Github:translate-x-1 transition-all duration-300" />
+                  <div>Nosotros</div>
+                  <Image className="h-5 w-5 lg:group-hover/Image:translate-x-1 transition-all duration-300" />
                 </Button>
               </a>
 
@@ -43,10 +43,10 @@ export default function Hero() {
                 <Button
                   variant="default"
                   size="lg"
-                  className="flex items-center gap-2 w-full group/Mail"
+                  className="flex items-center gap-2 w-full"
                 >
-                  <div>Email Me</div>
-                  <Mail className="h-5 w-5 lg:group-hover/Mail:translate-x-1 transition-all duration-300" />
+                  <div>Música Maestro</div>
+                  <Play className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
                 </Button>
               </a>
             </div>
