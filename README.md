@@ -29,32 +29,12 @@ If you would like to help improve the performance, accessibility, best practices
 | [shadcn/ui](https://ui.shadcn.com/)                                        | A modern, minimalistic UI library                                                     |
 | [tailwind css](https://tailwindcss.com)                                    | A utility-first CSS framework                                                         |
 | [zod](https://zod.dev)                                                     | TypeScript-first schema declaration and validation                                    |
-| [pocketbase](https://pocketbase.io)                                        | A modern, minimalistic database                                                       |
 | [react-hook-form](https://www.react-hook-form.com/)                        | Performant, flexible and extensible forms with easy-to-use validation                 |
 | [github public api](https://docs.github.com/en/rest?apiVersion=2022-11-28) | A REST API for accessing public Github repo, star, and user image data                |
 | [vercel](https://vercel.com)                                               | Deploy web projects with ease                                                         |
 | [umami analytics](https://umami.is/)                                       | A simple, fast, and privacy-focused website analytics alternative to Google Analytics |
 
 ## Getting Started
-
-### Pocketbase Setup
-
-First, we need to install Pocketbase. You can download the latest release from the [Pocketbase GitHub releases page](https://github.com/pocketbase/pocketbase/releases)
-
-```bash
-wget https://github.com/pocketbase/pocketbase/releases/download/v0.8.0/pocketbase_0.8.0_linux_amd64.zip
-unzip pocketbase_0.8.0_linux_amd64.zip
-```
-
-```bash
-chmod +x pocketbase
-```
-
-```bash
-./pocketbase serve
-```
-
-Go to [http://localhost:8080](http://localhost:8080) to see the Pocketbase dashboard. From there, you can import the schema from the `/pb/pb_schema.json` file in the root of this repository by using the "import collections" tab in the settings menu.
 
 ### Client Setup
 
