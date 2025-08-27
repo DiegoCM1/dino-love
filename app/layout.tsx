@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "engage-cook",
+  title: "365 Días A Tu Lado",
   description: "built using next.js, magic-ui, and tailwindcss",
 };
 

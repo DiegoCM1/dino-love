@@ -11,12 +11,11 @@ export default function Hero() {
   return (
     <div className="relative flex h-full w-full mx-auto items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       <div className="flex flex-col items-start justify-center h-full overflow-hidden p-6 z-50">
-        <WordPullUp words="Let's Cook" />
+        <WordPullUp words="365 Días a tu lado" />
 
         <div className="text-lg text-neutral-500 dark:text-neutral-400 lg:px-1 w-full ">
           <BlurIn className="w-3/4 sm:w-2/3">
-            I craft sleek, full-stack experiences that users love and developers
-            enjoy expanding.
+            Los locos al manicomio, los cuerdos al consulado, el tiempo se pasa volando, cuando te tengo a ti a mi lado.
           </BlurIn>
 
           <FadeIn direction="down" className="my-class">
