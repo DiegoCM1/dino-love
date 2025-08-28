@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/magicui/fade-in";
 import { Play, Pause, Heart as ImageIcon } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 const phrases = [
@@ -36,6 +36,7 @@ export default function Hero() {
   const [phrase, setPhrase] = useState(phrases[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [showHeart, setShowHeart] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -79,6 +80,10 @@ export default function Hero() {
                   variant="default"
                   size="lg"
                   className="flex items-center gap-2 w-full group/Heart"
+                  onClick={() => {
+                    setShowHeart(true);
+                    setTimeout(() => setShowHeart(false), 1500);
+                  }}
                 >
                   <div>Te elijo otra vez</div>
                   <ImageIcon className="h-5 w-5 lg:group-hover/Heart:translate-x-1 transition-all duration-300" />
@@ -118,6 +123,25 @@ export default function Hero() {
         </div>
       </div>
       <MeteorShower />
+      <AnimatePresence>
+        {showHeart && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              className="text-9xl text-pink-500 drop-shadow-[0_0_20px_rgba(236,72,153,0.8)]"
+              animate={{ scale: [1, 1.3, 1], opacity: [1, 1, 0] }}
+              transition={{ duration: 1.5 }}
+            >
+              ❤️
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
