@@ -43,7 +43,7 @@ export default function SecretMessage() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="text-3xl font-bold text-center mb-4">Rawr Secret Message</h2>
+        <h2 className="text-3xl font-bold text-center mb-4">Carta Extremadamente Sentimental. Lease Con Precaución ‼️</h2>
         {!unlocked && (
           <form
             onSubmit={handleSubmit}
@@ -61,7 +61,7 @@ export default function SecretMessage() {
               type="submit"
               className="px-4 py-2 rounded-md bg-primary text-white"
             >
-              Desbloquear
+              Desbloquear 🔐
             </button>
             {error && <p className="text-red-500 text-sm">{error}</p>}
           </form>
@@ -76,7 +76,12 @@ export default function SecretMessage() {
             >
               🦕❤️🦙
             </motion.div>
-            <p className="text-lg">Aquí va tu carta de amor...💌</p>
+            <p className="text-lg">Amore, nunca he sido de escribir palabras de amor... Tampoco había regalado flores ni esperado con tantas ansias a hablar con alguien, siempre pensé que esas cosas no eran para mi, que eran simplemente para otro tipo de persona.
+            Pero entonces llegaste tú. Desde el día que te vi, el solo hecho de ver tu cara ya me ponía nervioso y desde el momento en que te ví sonreirme supe que tenía una oportunidad, una oportunidad de tener algo real y genuino con aquella persona que tanto soñaba. Llego la primera cita, y supe que tu belleza no era todo lo que tenías, tenías algo más importante; tu persona. Y tu colita también of course, pero muchisimo más tu persona. 💘🦙🦕
+            No he sido bueno escribiendo cartas, creo que una frase mal dicha en persona comunica más que cualquier carta, pero este día, para esta ocasión, sentí que tenía que hacerlo, sentí por primera vez la necesidad de escribir algo lindo en papel, bueno, en digital, a la persona que me encanta, mi persona favorita. 💘💝😍
+            Contigo aprendí que las flores si tienen sentido, que  las palabras sí pueden abrazar, y que la vida se ve distinta cuando estás con la persona correcta. Gracias por hacerme sentír así, por hacerme conocer a ese Diego que ni siquiera yo conocía, y que ahora no quiero perder. Gracias, en resumen, por ser mi novia, feliz aniversario guerita 🥳🎊🎉.
+            Te amo demasiado 💓💓💓💓💓💓💓💓💓💓💓💓💓💓💓💓💓💓💓💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝💝🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦕🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦙🦕🦕🦕🦕🦕🦕🦙🦕🦙🦕🦕🦙🦕🦙🦕🦙🦕🦙🦕🦙🦕🦙🦕🦙🦙💓
+            </p>
             <FloatingHearts />
           </div>
         )}
