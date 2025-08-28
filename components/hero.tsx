@@ -91,14 +91,14 @@ export default function Hero() {
                   size="lg"
                   className="flex items-center gap-2 w-full group/Play"
                 >
-                  <div>{isPlaying ? "Pausar Música" : "Música Maestro"}</div>
+                  <div>{isPlaying ? "Pausar" : "Música Maestro"}</div>
                   {isPlaying ? (
                     <Pause className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
                   ) : (
                     <Play className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
                   )}
                 </Button>
-                <audio ref={audioRef} src="/music/song.mp3" className="hidden" />
+                <audio ref={audioRef} src="/music/mi-sorpresa-fuiste-tu.mp3" className="hidden" />
               </div>
             </div>
           </FadeIn>
