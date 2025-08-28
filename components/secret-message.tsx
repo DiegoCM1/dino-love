@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import MeteorShower from "@/components/magicui/meteors";
 
-const PASSWORD = "cusco"; // example password
+const PASSWORD = "dinosaurioherido!"; // example password
 
 export default function SecretMessage() {
   const [input, setInput] = useState("");
@@ -77,13 +77,6 @@ export default function SecretMessage() {
               🦕❤️🦙
             </motion.div>
             <p className="text-lg">Aquí va tu carta de amor...💌</p>
-            <a
-              href="/love-letter.txt"
-              download
-              className="underline text-primary"
-            >
-              Guardar este mensaje
-            </a>
             <FloatingHearts />
           </div>
         )}

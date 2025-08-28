@@ -4,7 +4,7 @@ import MeteorShower from "@/components/magicui/meteors";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/magicui/fade-in";
-import { Play, Image as ImageIcon } from "lucide-react";
+import { Play, Heart as ImageIcon } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
 import { useEffect, useState } from "react";
 
