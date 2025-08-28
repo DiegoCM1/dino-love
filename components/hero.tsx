@@ -4,9 +4,9 @@ import MeteorShower from "@/components/magicui/meteors";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/magicui/fade-in";
-import { Play, Image as ImageIcon } from "lucide-react";
+import { Play, Pause, Image as ImageIcon } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const phrases = [
   "Los locos al manicomio, los cuerdos al consulado, el tiempo se pasa volando, cuando te tengo a ti a mi lado.",
@@ -33,6 +33,8 @@ const phrases = [
 
 export default function Hero() {
   const [phrase, setPhrase] = useState(phrases[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -73,21 +75,31 @@ export default function Hero() {
                   <ImageIcon className="h-5 w-5 lg:group-hover/Image:translate-x-1 transition-all duration-300" />
                 </Button>
               </a>
-
-              <a
-                href="mailto:engage_intellect@protonmail.com"
-                target="_blank"
-                className="flex-1"
-              >
+              <div className="flex-1">
                 <Button
+                  onClick={() => {
+                    const audio = audioRef.current;
+                    if (!audio) return;
+                    if (isPlaying) {
+                      audio.pause();
+                    } else {
+                      audio.play();
+                    }
+                    setIsPlaying(!isPlaying);
+                  }}
                   variant="default"
                   size="lg"
-                  className="flex items-center gap-2 w-full"
+                  className="flex items-center gap-2 w-full group/Play"
                 >
-                  <div>Música Maestro</div>
-                  <Play className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
+                  <div>{isPlaying ? "Pausar Música" : "Música Maestro"}</div>
+                  {isPlaying ? (
+                    <Pause className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
+                  ) : (
+                    <Play className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
+                  )}
                 </Button>
-              </a>
+                <audio ref={audioRef} src="/music/song.mp3" className="hidden" />
+              </div>
             </div>
           </FadeIn>
         </div>
