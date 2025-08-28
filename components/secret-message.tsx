@@ -25,8 +25,8 @@ export default function SecretMessage() {
   return (
     <section className="relative w-full overflow-hidden rounded-xl border bg-background p-6">
       <motion.div
-        className="absolute top-4 left-0 text-4xl"
-        animate={{ x: ["-10%", "110%"] }}
+        className="absolute bottom-4 right-0 text-4xl"
+        animate={{ x: ["-10%", "-110%"] }}
         transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
       >
         🦕

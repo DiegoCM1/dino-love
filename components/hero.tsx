@@ -4,7 +4,7 @@ import MeteorShower from "@/components/magicui/meteors";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/magicui/fade-in";
-import { Play, Pause, Image as ImageIcon } from "lucide-react";
+import { Play, Pause, Heart as ImageIcon } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -78,10 +78,10 @@ export default function Hero() {
                 <Button
                   variant="default"
                   size="lg"
-                  className="flex items-center gap-2 w-full group/Image"
+                  className="flex items-center gap-2 w-full group/Heart"
                 >
-                  <div>Nosotros</div>
-                  <ImageIcon className="h-5 w-5 lg:group-hover/Image:translate-x-1 transition-all duration-300" />
+                  <div>Te elijo otra vez</div>
+                  <ImageIcon className="h-5 w-5 lg:group-hover/Heart:translate-x-1 transition-all duration-300" />
                 </Button>
               </a>
               <div className="flex-1">
