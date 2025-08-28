@@ -7,12 +7,14 @@ import { FadeIn } from "@/components/magicui/fade-in";
 import { Play, Pause, Image as ImageIcon } from "lucide-react";
 import BlurIn from "@/components/magicui/blur-in";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
 
 const phrases = [
   "Los locos al manicomio, los cuerdos al consulado, el tiempo se pasa volando, cuando te tengo a ti a mi lado.",
   "Si me dieran un peso por cada vez que te pienso, sería pobre, porque ya te habría comprado 1000 pares de botas con ese dinero.",
   "Te amo ❤",
-  "Porque mi cuerpo, se quema, de tanta pasión, que corre en mi mente, la imaginación.",
+  "Porque mi cuerpo, se quema, de tanta pasión, que corre en mi mente, la imaginación. 🔥",
   "Besarte es mi pasatiempo favorito, ¡y lo sabes!",
   "Guereja patas de coneja, eres todo lo que busco 🦕💘🦕",
   "Si, soy cursi.",
@@ -20,13 +22,12 @@ const phrases = [
   "Así el mundo se acabe, y todo lo que existe mañana desapareciera, esta llama no se apaga, hasta que yo me muera 🦙❤.",
   "Los carros son azules, gris es la carretera, si tu estuvieras más lejos, yo daría lo que fuera, por estar junto a mi guera.",
   "Eres el sueño del que nunca quiero despertar.",
-  "Escuchar tu voz es... Algo que nunca quiero dejar de hacer.",
   "Le hace falta un beso, que le de una rosa, que le haga sentir como si fuera su novia (Ya lo eres, besote en la frentona 😘).",
   "Que hasta donde te quiero, esa necia pregunta no responderé, si en mi amor no hay distancias, si no hay cerca no hay lejos, ¿como te haré saber?.",
   "Ahora se porque mi corazón nunca estuvo deacuerdo.",
   "Siempre te elegiría una y otra vez.",
   "No le vayas a decir, pero me estoy fijando en mi secretaria 🤫👀",
-  "Eres mi hoy y todos mis mañanas.",
+  "Pensar en ti es casi como respirar, básicamente inevitable. 💘",
   "Llamaron loco a aquel que bailaba, aquellos que no podían oír la música.",
   "El tiempo es muy raro, es lento cuando estamos lejos y es lo más rápido del mundo cuando hablo contigo, pero se detiene cuando te veo a los ojos",
 ];
@@ -58,6 +59,14 @@ export default function Hero() {
           <BlurIn key={phrase} className="w-3/4 sm:w-2/3">
             {phrase}
           </BlurIn>
+
+          <motion.div
+            className="absolute top-2/4 right-0 text-4xl"
+            animate={{ x: ["-50%", "-110%"] }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          >
+            🦕
+          </motion.div>
 
           <FadeIn direction="down" className="my-class">
             <div className="flex items-center gap-2 w-full lg:w-2/3 mt-6">
@@ -98,7 +107,11 @@ export default function Hero() {
                     <Play className="h-5 w-5 lg:group-hover/Play:translate-x-1 transition-all duration-300" />
                   )}
                 </Button>
-                <audio ref={audioRef} src="/music/mi-sorpresa-fuiste-tu.mp3" className="hidden" />
+                <audio
+                  ref={audioRef}
+                  src="/music/mi-sorpresa-fuiste-tu.mp3"
+                  className="hidden"
+                />
               </div>
             </div>
           </FadeIn>

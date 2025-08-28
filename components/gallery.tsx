@@ -5,12 +5,32 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  { src: "/images/thumbnail.png", caption: "Nuestro primer rawr 🦕" },
-  { src: "/images/thumbnail.png", caption: "La llama más tierna 🦙" },
-  { src: "/images/thumbnail.png", caption: "Dino-dance night 💃🦖" },
-  { src: "/images/thumbnail.png", caption: "Captura 4" },
-  { src: "/images/thumbnail.png", caption: "Captura 5" },
-  { src: "/images/thumbnail.png", caption: "Captura 6" },
+  {
+    src: "/images/romantic-kiss.webp",
+    caption: "Nuestra foto más actual y de París 🗼🦙🦕",
+  },
+  {
+    src: "/images/kiss-house.webp",
+    caption: "Con tus besos me haces sentir bien 🦙😘",
+  },
+  {
+    src: "/images/cargando-shany.webp",
+    caption: "Baile bajo la luz de la moon 🌙🦖",
+  },
+  {
+    src: "/images/kiss-paleteria.webp",
+    caption: "Ya te dije que me encantan tus besos??? 😘",
+  },
+  {
+    src: "/images/six-flax.webp",
+    caption: "Nada se compara a pasar tiempo contigo ⌛💖",
+  },
+  {
+    src: "/images/eyes.webp",
+    caption: "Verte a los ojos y detener el tiempo, eso deseo 👀",
+  },
+  { src: "/images/piramides.webp", caption: "El tiempo pasa demasiado rápido a tu lado ⌛🦖💘" },
+  { src: "/images/primera-cita.webp", caption: "Nuestro primer rawr 🦕💘" },
 ];
 
 export default function Gallery() {
@@ -21,7 +41,9 @@ export default function Gallery() {
 
   return (
     <section className="w-full">
-      <h2 className="text-3xl font-bold text-center mb-8">Galería de Momentos</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">
+        Galería de Momentos
+      </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((img, idx) => (
           <motion.div
