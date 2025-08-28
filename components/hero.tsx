@@ -28,7 +28,7 @@ const phrases = [
   "Siempre te elegiría una y otra vez.",
   "No le vayas a decir, pero me estoy fijando en mi secretaria 🤫👀",
   "Pensar en ti es casi como respirar, básicamente inevitable. 💘",
-  "Llamaron loco a aquel que bailaba, aquellos que no podían oír la música.",
+  "Chiquita, así estás de trompuda? O quieres beso? 😘💓.",
   "El tiempo es muy raro, es lento cuando estamos lejos y es lo más rápido del mundo cuando hablo contigo, pero se detiene cuando te veo a los ojos",
 ];
 

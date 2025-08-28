@@ -17,7 +17,7 @@ export default function SecretMessage() {
       setUnlocked(true);
       setError("");
     } else {
-      setError("Ese no es el rawr correcto 🦙");
+      setError("Ese no es el rawr correcto 🦖🦙");
       setUnlocked(false);
     }
   };
@@ -53,7 +53,7 @@ export default function SecretMessage() {
               type="password"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="hint: nuestro primer viaje 🦕✨"
+              placeholder="Nuestra palabra 🦕✨🤫"
               className="w-full rounded-md border px-4 py-2"
               animate={error ? { x: [-10, 10, -10, 10, 0] } : {}}
             />
